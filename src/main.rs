@@ -4,7 +4,7 @@ fn main() {
     let w=30;let h=10;
     let mut arr =vec![vec!["_";w];h];
     let ms10=time::Duration::from_millis(250);
-    let mut now=time::Instant::now();
+    let now=time::Instant::now();
     let mut r=0;
     let mut v=0;
     let mut g=0;
@@ -30,6 +30,7 @@ fn main() {
         println!("x: {} y: {}",r,v);
         println!("s: {}",e.as_secs());
         thread::sleep(ms10);
-        process::Command::new("clear").status().unwrap();
+        // process::Command::new("clear").status().unwrap(); linux
+        print!("{esc}[2J{esc}[1;1H", esc = 27 as char);
     }
 }
