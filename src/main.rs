@@ -19,7 +19,8 @@ fn main() {
                 arr[v][r] ="+";
                 arr[i][i*g] = "o";
                 print!("{}",arr[i][j]);
-            }println!("");
+            }
+            println!("");
         }
 
         if g >= 3{ g=0 } g+=1;
